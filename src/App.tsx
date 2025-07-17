@@ -166,7 +166,12 @@ function App() {
       }
     `;
     document.head.appendChild(style);
-    return () => document.head.removeChild(style);
+    
+    return () => {
+      if (document.head.contains(style)) {
+        document.head.removeChild(style);
+      }
+    };
   }, []);
 
   // Auto-save timer ref
@@ -185,7 +190,6 @@ function App() {
   const [filterStatus, setFilterStatus] = useState('all');
   const [filterPriority, setFilterPriority] = useState('all');
   const [showNotifications, setShowNotifications] = useState(false);
-  const [currentTaskView, setCurrentTaskView] = useState('cards'); // 'cards', 'kanban', 'list'
   const [selectedTag, setSelectedTag] = useState('all');
   
   // Task Form States
@@ -209,8 +213,6 @@ function App() {
   const [editTaskStatus, setEditTaskStatus] = useState('todo');
   const [editTaskEstimatedHours, setEditTaskEstimatedHours] = useState(4);
   const [editTaskCompletedHours, setEditTaskCompletedHours] = useState(0);
-  const [editTaskTags, setEditTaskTags] = useState('');
-  const [editTaskAssignee, setEditTaskAssignee] = useState('');
   
   // Comment State
   const [newComment, setNewComment] = useState('');
@@ -492,13 +494,13 @@ function App() {
   };
 
   // Format time according to settings
-  const formatTime = (date: Date) => {
-    const options: Intl.DateTimeFormatOptions = {
-      timeZone: settings.timezone,
-      hour12: settings.timeFormat === '12h'
-    };
-    return date.toLocaleTimeString('en-US', options);
-  };
+  // const formatTime = (date: Date) => {
+  //   const options: Intl.DateTimeFormatOptions = {
+  //     timeZone: settings.timezone,
+  //     hour12: settings.timeFormat === '12h'
+  //   };
+  //   return date.toLocaleTimeString('en-US', options);
+  // };
 
   const resetSettings = () => {
     setSettings({
@@ -925,12 +927,12 @@ function App() {
   };
 
   // Helper function to get the actual theme being used
-  const getActualTheme = () => {
-    if (settings.theme === 'auto') {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    return settings.theme;
-  };
+  // const getActualTheme = () => {
+  //   if (settings.theme === 'auto') {
+  //     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  //   }
+  //   return settings.theme;
+  // };
 
   // Check for due tasks and send reminders
   useEffect(() => {
@@ -961,7 +963,7 @@ function App() {
 
   // Modern Header Component with Enhanced Neumorphism
   const renderHeader = () => {
-    const actualTheme = getActualTheme();
+    // const actualTheme = getActualTheme();
     return (
     <header style={{
       background: 'var(--bg-secondary)',

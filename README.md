@@ -1,53 +1,94 @@
-# 🎯 TaskFlow - Modern Task Management App
+# 🚀 TaskFlow - Modern Task Management App
 
-![TaskFlow Banner](https://img.shields.io/badge/TaskFlow-Modern%20Task%20Management-blue?style=for-the-badge&logo=react&logoColor=white)
+A powerful, modern task management application built with React 19, TypeScript, and Vite. TaskFlow provides an intuitive interface for managing projects, tasks, and team collaboration with real-time updates and a beautiful neumorphic design.
 
-A beautiful, modern task management application built with React 19, TypeScript, and Material-UI. TaskFlow provides an intuitive and powerful interface for managing projects, tasks, and team collaboration.
+![TaskFlow Preview](https://img.shields.io/badge/TaskFlow-v1.0-blue?style=for-the-badge&logo=react)
+![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-green?style=for-the-badge&logo=github)
 
 ## ✨ Features
 
-### 🏠 **Dashboard**
-- **Interactive Analytics** - Visual charts showing productivity metrics
-- **Quick Stats** - Overview of projects, tasks, and team performance
-- **Recent Activity** - Timeline of latest updates and changes
-- **Productivity Insights** - Track completion rates and time estimates
+### 🎯 Core Functionality
+- **Project Management** - Create, edit, and organize projects
+- **Task Management** - Full CRUD operations for tasks with detailed tracking
+- **User Profiles** - Comprehensive profile management with real-time editing
+- **Dashboard** - Interactive dashboard with project and task analytics
+- **Search & Filter** - Advanced filtering and search capabilities
 
-### 📋 **Task Management**
-- **Multiple View Modes** - Kanban board, card grid, and list views
-- **Advanced Filtering** - Filter by status, priority, assignee, and project
-- **Real-time Search** - Instant search across all tasks
-- **Drag & Drop** - Intuitive task reordering and status updates
-- **Priority System** - Visual priority indicators (High, Medium, Low)
-- **Time Tracking** - Estimated vs actual hours with progress tracking
+### 🎨 UI/UX
+- **Neumorphic Design** - Modern, elegant design with soft shadows
+- **Responsive Layout** - Works seamlessly on desktop, tablet, and mobile
+- **Dark/Light Themes** - Theme switching with smooth transitions
+- **Real-time Updates** - Live preview of changes as you edit
+- **Drag & Drop** - Kanban board with @dnd-kit integration
 
-### 🎨 **Modern UI/UX**
-- **Neumorphic Design** - Beautiful, modern interface with depth and shadows
-- **Dark/Light Themes** - Automatic and manual theme switching
-- **Responsive Layout** - Perfect on desktop, tablet, and mobile
-- **Smooth Animations** - Fluid transitions and micro-interactions
-- **Accessibility** - ARIA compliant and keyboard navigation
+### 👥 Collaboration
+- **Team Management** - Assign tasks to team members
+- **Progress Tracking** - Visual progress indicators and completion stats
+- **Activity Feeds** - Track project and task activities
+- **Achievement System** - Gamified badges and achievements
 
-### 👥 **Team Collaboration**
-- **User Profiles** - Comprehensive profile management with achievements
-- **Team Overview** - See all team members and their current tasks
-- **Activity Tracking** - Monitor team productivity and contributions
-- **Assignment System** - Easy task assignment and reassignment
-
-### 🔧 **Advanced Features**
-- **Project Organization** - Group tasks by projects with progress tracking
-- **Achievement System** - Gamification with badges and milestones
-- **Bulk Operations** - Select and modify multiple tasks at once
-- **Export Options** - Export data in various formats
-- **Settings & Customization** - Personalize your experience
-
-## 🚀 Live Demo
-
-**[View Live Application](https://yourusername.github.io/taskflow-app/)**
-
-## 🛠️ Technology Stack
+## �️ Tech Stack
 
 ### Frontend
 - **React 19** - Latest React with concurrent features
+- **TypeScript** - Type-safe development
+- **Vite** - Lightning-fast build tool and dev server
+- **Material-UI v6** - Component library with custom theming
+
+### State Management
+- **Redux Toolkit** - Efficient state management
+- **React Hook Form** - Form handling with validation
+- **Yup** - Schema validation
+
+### Development Tools
+- **ESLint** - Code linting and formatting
+- **TypeScript ESLint** - TypeScript-specific linting rules
+- **Hot Module Replacement** - Instant development feedback
+
+## 🚀 Live Demo
+
+Visit the live application: [TaskFlow Demo](https://yourusername.github.io/Task-Management-App/)
+
+## 🏃‍♂️ Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/Task-Management-App.git
+   cd Task-Management-App
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   ```
+   http://localhost:5173
+   ```
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
 - **TypeScript** - Type-safe development
 - **Vite** - Lightning-fast build tool
 - **Material-UI v6** - Modern React components

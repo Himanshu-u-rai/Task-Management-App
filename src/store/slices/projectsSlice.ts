@@ -14,29 +14,11 @@ import {
   serverTimestamp 
 } from 'firebase/firestore';
 import { db } from '../../config/firebase';
-import { mockDataService } from '../../services/mockData';
 import type { Project, ProjectsState, CreateProjectForm } from '../../types';
 import { getSocket } from '../../config/socket';
 
 // Check if we should use mock data
-const USE_MOCK_DATA = import.meta.env.DEV && import.meta.env.VITE_USE_MOCK_AUTH === 'true';slice
-import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
-import { 
-  collection, 
-  doc, 
-  getDocs, 
-  getDoc, 
-  addDoc, 
-  updateDoc, 
-  deleteDoc, 
-  query, 
-  where, 
-  orderBy,
-  serverTimestamp 
-} from 'firebase/firestore';
-import { db } from '../../config/firebase';
-import type { Project, ProjectsState, CreateProjectForm, ProjectMember } from '../../types';
-import { getSocket } from '../../config/socket';
+const USE_MOCK_DATA = import.meta.env.DEV && import.meta.env.VITE_USE_MOCK_AUTH === 'true';
 
 const initialState: ProjectsState = {
   projects: [],
