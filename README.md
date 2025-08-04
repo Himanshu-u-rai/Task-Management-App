@@ -237,6 +237,38 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
+## 🚀 Deployment on Vercel
+
+### Prerequisites
+- GitHub account
+- Vercel account (free)
+- Environment variables ready
+
+### Steps
+1. **Push your code to GitHub** (if not already done)
+2. **Import project to Vercel**:
+   - Go to [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import your GitHub repository
+3. **Configure build settings**:
+   - Root Directory: `./` (default)
+   - Build Command: `vite build`
+   - Output Directory: `dist`
+4. **Add environment variables** in Vercel dashboard:
+   - Copy from your `.env.example`
+   - Replace with actual Firebase config values
+5. **Deploy**: Click "Deploy" button
+
+### Environment Variables
+Make sure to add these in Vercel dashboard:
+```bash
+VITE_FIREBASE_API_KEY=your-actual-api-key
+VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your-project-id
+VITE_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=123456789
+VITE_FIREBASE_APP_ID=your-app-id
+```
 
 **[⭐ Star this repository](https://github.com/yourusername/taskflow-app)** if you find it helpful!
 
